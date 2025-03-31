@@ -57,18 +57,30 @@ public class TicTacToe {
             board[row][col] = currentPlayer;
             return true;
         }
-        System.out.println("Spot already taken. Try again.");
+        System.out.println("Spot is already taken. Try again.");
         return false;
     }
 
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Welcome to Tic Tac Toe!");
+        System.out.println(
+                "In this classic game, you win when rows are completed vertically, horizontally, or diagonally by your mark.");
+        System.out.println(
+                "When it is your turn, you will be prompted to enter your move by entering the spot of the grid");
+        System.out.println("you would like to take (row first, then column).");
+        System.out.println("The rows are numbered from 0 to 2, from top to bottom.");
+        System.out.println("The columns are numbered from 0 to 2, from left to right.");
+        System.out.println("Ex. To take the middle spot, you would enter:");
+        System.out.println("1");
+        System.out.println("1");
+        System.out.println("If all spots on the grid are taken, the game ends in a draw.");
+        System.out.println("Have fun playing!");
         createBoard();
         printBoard();
         while (true) {
             try {
-                System.out.println("Player " + currentPlayer + ", enter your move (row and column): ");
+                System.out.println("Player " + currentPlayer + ", enter your move: ");
                 int row = keyboard.nextInt();
                 int col = keyboard.nextInt();
 
