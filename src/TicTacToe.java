@@ -23,7 +23,7 @@ public class TicTacToe {
         }
     }
 
-    public static boolean checkBoardFull() {
+    public static boolean checkDraw() {
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 3; col++) {
                 if (board[row][col] == '-') {
@@ -90,7 +90,7 @@ public class TicTacToe {
                         System.out.println("Player " + currentPlayer + " wins!");
                         break;
                     }
-                    if (checkBoardFull()) {
+                    if (checkDraw()) {
                         System.out.println("It's a draw!");
                         break;
                     }
